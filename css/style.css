@@ -13,14 +13,14 @@
 }
 
 .dark-mode {
-  --primary-bg: #000;
+  --primary-bg: #191919;
   --primary-color: #fdfbf5;
   --primary-border-color: rgb(172, 172, 172);
 }
 
 .light-mode {
   --primary-bg: #fdfbf5;
-  --primary-color: #000;
+  --primary-color: #191919;
   --primary-border-color: rgba(0, 0, 0, 0.404);
 }
 
@@ -130,7 +130,7 @@ p {
   margin-block: 1rem 2rem;
 }
 
-.section-primary-seperator {
+.section-primary-separator {
   height: 1.5px;
   background-color: var(--theme-color);
 }
@@ -138,7 +138,6 @@ p {
 /* Reusable Components for This Site End */
 .site-wrapper {
   padding: 2rem;
-  height: 4000px;
   border: 2px solid var(--theme-primary-border-color);
 }
 
@@ -275,6 +274,7 @@ p {
   text-transform: uppercase;
   font-weight: 400;
   margin-block: 0.5em;
+  color: var(--theme-color);
 }
 .our-values .our-values-right .our-values-right-box p {
   font-size: 1.6rem;
@@ -313,11 +313,58 @@ p {
   text-transform: capitalize;
   font-weight: 500;
   margin-block: 0.5em;
+  color: var(--theme-color);
 }
 .our-team .our-team-right .our-team-right-box h6 {
   font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: 300;
+  color: var(--theme-color);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer-links .footer-links-left p {
+  font-size: 1.5rem;
+  color: var(--theme-color);
+  font-weight: 300;
+  margin-top: 2rem;
+}
+.footer-links .footer-links-right {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer-links .footer-links-right .separator {
+  height: 1.5px;
+  background-color: var(--theme-color);
+}
+.footer-links .footer-links-right .footer-links-right-col h5 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+  color: var(--theme-color);
+}
+.footer-links .footer-links-right .footer-links-right-col ul li {
+  font-size: 1.3rem;
+  color: var(--theme-color);
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-block: 1.5rem;
+}
+
+footer {
+  padding-block: 3rem;
+}
+footer p {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--theme-color);
+  font-weight: 400;
 }
 
 /* General Styles for screen size >= 768px */
@@ -375,14 +422,27 @@ p {
     flex-direction: row;
     gap: 3rem;
   }
-  .our-team .section-primary-seperator {
+  .our-team .section-primary-separator {
     height: auto;
     width: 2px;
+  }
+  .footer-links {
+    flex-direction: row;
+  }
+  .footer-links .section-primary-separator {
+    height: auto;
+    width: 1px;
+  }
+  .footer-links .footer-links-left {
+    flex: 1;
+  }
+  .footer-links .footer-links-right {
+    flex: 2;
   }
 }
 /* General Styles for screen size >= 768px */
 @media screen and (min-width: 1200px) {
-  .section-primary-seperator {
+  .section-primary-separator {
     height: auto;
     width: 2px;
   }
@@ -473,6 +533,18 @@ p {
   }
   .our-team .our-team-right .our-team-right-box {
     width: 47%;
+  }
+  .footer-links .footer-links-right {
+    flex-direction: row;
+  }
+  .footer-links .footer-links-right .footer-links-right-col {
+    flex: 1;
+  }
+  .footer-links .footer-links-right .separator {
+    display: none;
+  }
+  footer {
+    padding-block: 5rem;
   }
 }
 /* Page-Specific Styles End */

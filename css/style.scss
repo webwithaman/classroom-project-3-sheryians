@@ -1,0 +1,429 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Syne:wght@400..800&display=swap");
+
+/* CSS Variables Start */
+:root {
+  /* Theme Fonts */
+  --font-family-1: "Roboto Mono", serif;
+  --font-family-2: "Syne", serif;
+  --font-family-3: "Inter", serif;
+
+  /* Theme Colors */
+
+  --theme-bg: var(--primary-bg);
+  --theme-color: var(--primary-color);
+  --theme-primary-border-color: var(--primary-border-color);
+}
+
+.dark-mode {
+  --primary-bg: #000;
+  --primary-color: #fdfbf5;
+  --primary-border-color: rgb(172, 172, 172);
+}
+
+.light-mode {
+  --primary-bg: #fdfbf5;
+  --primary-color: #000;
+  --primary-border-color: rgba(0, 0, 0, 0.404);
+}
+
+/* CSS Variables End */
+
+/* Reset Default Styles Start */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  padding: 1rem;
+  background-color: var(--theme-bg);
+}
+/* Reset Default Styles End */
+
+/* Common Styles for Frequently Used Elements Start */
+a {
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s linear;
+  font-family: var(--font-family-1);
+}
+
+li {
+  list-style: none;
+  font-family: var(--font-family-3);
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-2);
+}
+
+p {
+  font-family: var(--font-family-3);
+}
+/* Common Styles for Frequently Used Elements End */
+
+/* Reusable Components for This Site Start */
+.primary-btn {
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  font-family: var(--font-family-1);
+  background-color: var(--theme-color);
+  color: var(--theme-bg);
+  font-size: 1.5rem;
+  padding: 0.5em 0.7em;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+/* Reusable Components for This Site End */
+
+// Page-Specific Styles Start
+
+.site-wrapper {
+  padding: 2rem;
+  height: 2000px;
+  border: 2px solid var(--theme-primary-border-color);
+}
+
+.site-wrapper > section {
+  padding-block: 3rem;
+}
+
+// Navbar Start
+.navbar {
+  border-bottom: 2px solid var(--theme-primary-border-color);
+  padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--theme-color);
+
+    i {
+      font-size: 3rem;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 2.3rem;
+      font-weight: 600;
+    }
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    #checkbox-for-toggle {
+      display: none;
+    }
+
+    #checkbox-for-toggle:checked + .nav-links {
+      display: flex;
+    }
+
+    #checkbox-for-toggle:checked
+      ~ .theme-mode-toggle-btns
+      .toggle-bar
+      .toggle-bar-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    #checkbox-for-toggle:checked
+      ~ .theme-mode-toggle-btns
+      .toggle-bar
+      .toggle-bar-line:nth-child(1) {
+      transform-origin: right top;
+      transform: rotate(-37deg);
+    }
+
+    #checkbox-for-toggle:checked
+      ~ .theme-mode-toggle-btns
+      .toggle-bar
+      .toggle-bar-line:nth-child(3) {
+      transform-origin: right bottom;
+      transform: rotate(35deg);
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      font-size: 1.6rem;
+      font-weight: 400;
+      background-color: var(--theme-bg);
+      border: 2px solid #343230;
+      padding: 2rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+
+      li {
+        border-bottom: 2px solid var(--theme-primary-border-color);
+        padding-block: 1em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        &:has(+ button) {
+          border-bottom: none;
+        }
+
+        a {
+          color: var(--theme-color);
+        }
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+
+    .social-icons {
+      display: none;
+    }
+
+    .theme-mode-toggle-btns {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+
+      .theme-toggle {
+        display: flex;
+        padding: 0.8em;
+        border: 1px solid var(--theme-primary-border-color);
+        border-radius: 20px;
+        width: 6rem;
+        font-size: 1.2rem;
+        color: var(--theme-color);
+      }
+
+      .toggle-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.9rem;
+      }
+
+      .toggle-bar {
+        .toggle-bar-line {
+          width: 3.2rem;
+          height: 0.1rem;
+          background-color: var(--theme-color);
+          transition: all 0.2s ease-out;
+        }
+      }
+    }
+  }
+}
+// Navbar End
+
+// Hero Section Start
+.hero {
+  .hero-text {
+    h6 {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      color: var(--theme-color);
+      font-weight: 200;
+    }
+
+    h1 {
+      text-transform: capitalize;
+      font-size: 5.5rem;
+      color: var(--theme-color);
+      font-weight: 600;
+      margin-block: 1rem 2rem;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .hero-img {
+    border-radius: 1rem;
+    aspect-ratio: 1/0.6;
+  }
+}
+// Hero Section End
+
+/* General Styles for screen size >= 768px */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 11px;
+  }
+
+  body {
+    padding: 1.5rem;
+  }
+
+  .site-wrapper {
+    padding: 3rem;
+  }
+
+  // Navbar Start
+  .navbar {
+    padding-bottom: 3rem;
+
+    .navbar-right {
+      .social-icons {
+        display: flex;
+        gap: 1.5rem;
+
+        a {
+          display: grid;
+          place-items: center;
+          font-size: 1.2rem;
+          width: 3.5rem;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          text-transform: uppercase;
+          color: var(--theme-color);
+          border: 1px solid var(--theme-primary-border-color);
+        }
+      }
+
+      .separator {
+        width: 1px;
+        background-color: var(--theme-color);
+        align-self: stretch;
+      }
+
+      .separator:first-of-type {
+        display: none;
+      }
+    }
+  }
+  // Navbar End
+
+  // Hero Section Start
+  .hero {
+    .hero-text {
+      h1 {
+        font-size: 6.5rem;
+      }
+    }
+  }
+  // Hero Section End
+}
+
+/* General Styles for screen size >= 768px */
+@media screen and (min-width: 1200px) {
+  .site-wrapper {
+    padding: 4rem;
+  }
+
+  .site-wrapper > section {
+    padding-block: 5rem;
+  }
+
+  // Navbar Start
+  .navbar {
+    padding-bottom: 4rem;
+
+    .navbar-right {
+      .nav-links {
+        display: revert;
+        position: initial;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.8rem;
+        border: none;
+        padding: 0;
+
+        li {
+          padding: 0;
+          border: none;
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 1.5rem;
+
+        a {
+          display: grid;
+          place-items: center;
+          font-size: 1.2rem;
+          width: 3.5rem;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          text-transform: uppercase;
+          color: var(--theme-color);
+          border: 1px solid var(--theme-primary-border-color);
+        }
+      }
+
+      .separator {
+        width: 1px;
+        background-color: var(--theme-color);
+        align-self: stretch;
+      }
+
+      .theme-mode-toggle-btns {
+        .toggle-bar {
+          display: none;
+        }
+      }
+    }
+  }
+  // Navbar End
+
+  // Hero Section Start
+  .hero {
+    .hero-text {
+      h1 {
+        font-size: 8rem;
+
+        br {
+          display: revert;
+        }
+      }
+    }
+  }
+  // Hero Section End
+}
+/* Page-Specific Styles End */
+
+/* Keyframes for Animations Start */
+@keyframes animation-name {
+  /* Define your keyframes here */
+}
+/* Keyframes for Animations End */

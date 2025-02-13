@@ -1,28 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light-mode">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title></title>
+    <title>Creative Agency</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <!-- FontAwesome CDN for icons -->
+    <script
+      src="https://kit.fontawesome.com/2bcb8da7fa.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
 
     <!-- Custom External Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
 
   <body>
-    <div class="site-wrapper"></div>
+    <!-- Site Wrapper Start -->
+    <div class="site-wrapper">
+      <!-- Navbar Start -->
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-brands fa-slack"></i>
+          <h2>FYLAA</h2>
+        </div>
+
+        <div class="navbar-right">
+          <input type="checkbox" id="checkbox-for-toggle" />
+
+          <ul class="nav-links">
+            <li><a href="">Home</a></li>
+            <li><a href="">services</a></li>
+            <li><a href="">studio</a></li>
+            <li><a href="">blog</a></li>
+            <li><a href="">contact</a></li>
+            <button class="primary-btn" type="button">let's talk</button>
+          </ul>
+
+          <span class="separator"></span>
+
+          <div class="social-icons">
+            <a href="">in</a>
+            <a href="">in</a>
+            <a href="">in</a>
+          </div>
+
+          <span class="separator"></span>
+
+          <div class="theme-mode-toggle-btns">
+            <div class="theme-toggle">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+            <label for="checkbox-for-toggle" class="toggle-bar">
+              <span class="toggle-bar-line toggle-bar-line-1"></span>
+              <span class="toggle-bar-line toggle-bar-line-2"></span>
+              <span class="toggle-bar-line toggle-bar-line-2"></span>
+            </label>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Hero Section Start -->
+      <section class="hero">
+        <div class="hero-text">
+          <h6>About us</h6>
+          <h1>
+            Creative studio<br />
+            that inspires.
+          </h1>
+        </div>
+        <img
+          class="hero-img"
+          src="assets/images/hero-img.webp"
+          alt="hero-img"
+        />
+      </section>
+      <!-- Hero Section End -->
+
+      <!-- Our Values Section Start -->
+      <section class="our-values">
+        <div class="our-values-left">
+          <div class="our-values-text">
+            <h6>About us</h6>
+            <h1>
+              Creative studio<br />
+              that inspires.
+            </h1>
+          </div>
+          <button class="primary-btn" type="button">our services</button>
+        </div>
+
+        <span class="separartor"></span>
+
+        <div class="our-values-right">
+          <div class="our-values-right-box">
+            <i class="fa-brands fa-slack"></i>
+            <h2>Vision</h2>
+            <p>
+              Our relentless pursuit of a shared vision fuels our creativity and
+              propels us forward. With clarity and foresight, we craft
+              strategies that align with our clients' goals and aspirations,
+              transforming their dreams into reality and shaping a future worth
+              embracing.
+            </p>
+          </div>
+
+          <span class="separator"></span>
+
+          <div class="our-values-right-box">
+            <i class="fa-brands fa-slack"></i>
+            <h2>Vision</h2>
+            <p>
+              Our relentless pursuit of a shared vision fuels our creativity and
+              propels us forward. With clarity and foresight, we craft
+              strategies that align with our clients' goals and aspirations,
+              transforming their dreams into reality and shaping a future worth
+              embracing.
+            </p>
+          </div>
+
+          <span class="separator"></span>
+
+          <div class="our-values-right-box">
+            <i class="fa-brands fa-slack"></i>
+            <h2>Vision</h2>
+            <p>
+              Our relentless pursuit of a shared vision fuels our creativity and
+              propels us forward. With clarity and foresight, we craft
+              strategies that align with our clients' goals and aspirations,
+              transforming their dreams into reality and shaping a future worth
+              embracing.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Our Values Section End -->
+    </div>
+    <!-- Site Wrapper End -->
+
+    <!-- Javascript -->
+    <script>
+      let themeToggleBtn = (document.querySelector(".theme-toggle").onclick =
+        function () {
+          if (!document.documentElement.classList.contains("dark-mode")) {
+            document.documentElement.classList.add("dark-mode");
+            document.documentElement.classList.remove("light-mode");
+            this.style.justifyContent = "flex-end";
+          } else {
+            document.documentElement.classList.add("light-mode");
+            document.documentElement.classList.remove("dark-mode");
+            this.style.justifyContent = "flex-start";
+          }
+        });
+    </script>
   </body>
 </html>

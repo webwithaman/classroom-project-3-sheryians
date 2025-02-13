@@ -1,0 +1,7 @@
+/* Reset Default Styles Start */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Work Sans", serif;
+}

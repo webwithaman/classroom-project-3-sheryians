@@ -90,6 +90,23 @@ p {
 /* Common Styles for Frequently Used Elements End */
 
 /* Reusable Components for This Site Start */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--theme-color);
+
+  i {
+    font-size: 3rem;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    font-weight: 600;
+  }
+}
+
 .primary-btn {
   border: none;
   cursor: pointer;
@@ -102,18 +119,39 @@ p {
   border-radius: 5px;
   text-transform: uppercase;
 }
+
+.section-primary-small-text {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: var(--theme-color);
+  font-weight: 200;
+}
+
+.section-primary-heading {
+  text-transform: capitalize;
+  font-size: 4.3rem;
+  color: var(--theme-color);
+  font-weight: 500;
+  margin-block: 1rem 2rem;
+}
+
+.section-primary-seperator {
+  height: 1.5px;
+  background-color: var(--theme-color);
+}
 /* Reusable Components for This Site End */
 
 // Page-Specific Styles Start
 
 .site-wrapper {
   padding: 2rem;
-  height: 2000px;
+  height: 4000px;
   border: 2px solid var(--theme-primary-border-color);
 }
 
 .site-wrapper > section {
   padding-block: 3rem;
+  border-bottom: 2px solid var(--theme-primary-border-color);
 }
 
 // Navbar Start
@@ -124,23 +162,6 @@ p {
   justify-content: space-between;
   align-items: center;
   position: relative;
-
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--theme-color);
-
-    i {
-      font-size: 3rem;
-    }
-
-    h2 {
-      text-transform: uppercase;
-      font-size: 2.3rem;
-      font-weight: 600;
-    }
-  }
 
   .navbar-right {
     display: flex;
@@ -255,19 +276,10 @@ p {
 // Hero Section Start
 .hero {
   .hero-text {
-    h6 {
-      text-transform: uppercase;
-      font-size: 1.6rem;
-      color: var(--theme-color);
-      font-weight: 200;
-    }
-
     h1 {
-      text-transform: capitalize;
-      font-size: 5.5rem;
-      color: var(--theme-color);
-      font-weight: 600;
-      margin-block: 1rem 2rem;
+      &.section-primary-heading {
+        font-size: 5.5rem;
+      }
 
       br {
         display: none;
@@ -282,8 +294,112 @@ p {
 }
 // Hero Section End
 
+// Our Values Section Start
+.our-values {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+
+  .our-values-right {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+
+    .separator {
+      height: 1.5px;
+      background-color: var(--theme-color);
+    }
+
+    .our-values-right-box {
+      display: flex;
+      flex-direction: column;
+
+      i {
+        font-size: 5rem;
+        color: var(--theme-color);
+      }
+
+      h2 {
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-block: 0.5em;
+      }
+
+      p {
+        font-size: 1.6rem;
+        color: var(--theme-color);
+        font-weight: 300;
+      }
+    }
+  }
+}
+// Our Values Section End
+
+// Our Team Section Start
+.our-team {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .our-team-left {
+    .our-team-text {
+      position: sticky;
+      top: 0;
+
+      p {
+        font-size: 1.9rem;
+        color: var(--theme-color);
+        font-weight: 400;
+      }
+    }
+  }
+
+  .our-team-right {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .our-team-right-box {
+      .our-team-video {
+        video {
+          width: 100%;
+          aspect-ratio: 4/3;
+          object-fit: cover;
+          border-radius: 2rem;
+        }
+      }
+
+      h4 {
+        font-size: 2.4rem;
+        text-transform: capitalize;
+        font-weight: 500;
+        margin-block: 0.5em;
+      }
+      h6 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+    }
+  }
+}
+// Our Team Section End
+
+// Footer Links Start
+// Footer Links End
+
+// Footer Start
+footer {
+}
+// Footer End
+
 /* General Styles for screen size >= 768px */
 @media screen and (min-width: 768px) {
+  .section-primary-heading {
+    font-size: 5.3rem;
+  }
+
   html {
     font-size: 11px;
   }
@@ -335,17 +451,56 @@ p {
   .hero {
     .hero-text {
       h1 {
-        font-size: 6.5rem;
+        &.section-primary-heading {
+          font-size: 6.5rem;
+        }
       }
     }
   }
   // Hero Section End
+
+  // Our Values Section Start
+  .our-values {
+    .our-values-right {
+      .our-values-right-box {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+
+        h2 {
+          margin-block: 0;
+        }
+      }
+    }
+  }
+  // Our Values Section End
+
+  // Our Team Section Start
+  .our-team {
+    flex-direction: row;
+    gap: 3rem;
+
+    .section-primary-seperator {
+      height: auto;
+      width: 2px;
+    }
+  }
+  // Our Team Section End
 }
 
 /* General Styles for screen size >= 768px */
 @media screen and (min-width: 1200px) {
+  .section-primary-seperator {
+    height: auto;
+    width: 2px;
+  }
+
+  .section-primary-heading {
+    font-size: 6.8rem;
+  }
+
   .site-wrapper {
-    padding: 4rem;
+    padding: 4.2rem;
   }
 
   .site-wrapper > section {
@@ -354,7 +509,7 @@ p {
 
   // Navbar Start
   .navbar {
-    padding-bottom: 4rem;
+    padding-bottom: 4.2rem;
 
     .navbar-right {
       .nav-links {
@@ -410,7 +565,9 @@ p {
   .hero {
     .hero-text {
       h1 {
-        font-size: 8rem;
+        &.section-primary-heading {
+          font-size: 8rem;
+        }
 
         br {
           display: revert;
@@ -419,6 +576,52 @@ p {
     }
   }
   // Hero Section End
+
+  // Our Values Section Start
+  .our-values {
+    flex-direction: row;
+
+    .our-values-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex: 2;
+    }
+
+    .our-values-right {
+      flex: 1;
+
+      .our-values-right-box {
+        flex-direction: column;
+        gap: 0;
+
+        h2 {
+          margin-block: 0.3em;
+        }
+      }
+    }
+  }
+  // Our Values Section End
+
+  // Our Team Section Start
+  .our-team {
+    .our-team-left {
+      flex: 1;
+    }
+
+    .our-team-right {
+      flex: 2;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .our-team-right-box {
+        width: 47%;
+      }
+    }
+  }
+  // Our Team Section End
 }
 /* Page-Specific Styles End */
 

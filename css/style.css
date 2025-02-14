@@ -1,12 +1,8 @@
-/* Google Fonts Import */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Syne:wght@400..800&display=swap");
-/* CSS Variables Start */
 :root {
-  /* Theme Fonts */
   --font-family-1: "Roboto Mono", serif;
   --font-family-2: "Syne", serif;
   --font-family-3: "Inter", serif;
-  /* Theme Colors */
   --theme-bg: var(--primary-bg);
   --theme-color: var(--primary-color);
   --theme-primary-border-color: var(--primary-border-color);
@@ -24,8 +20,6 @@
   --primary-border-color: rgb(172, 172, 172);
 }
 
-/* CSS Variables End */
-/* Reset Default Styles Start */
 *,
 *::before,
 *::after {
@@ -35,7 +29,7 @@
 }
 
 html {
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -46,8 +40,6 @@ body {
   background-color: var(--theme-bg);
 }
 
-/* Reset Default Styles End */
-/* Common Styles for Frequently Used Elements Start */
 a {
   text-decoration: none;
   display: inline-block;
@@ -81,8 +73,6 @@ p {
   font-family: var(--font-family-3);
 }
 
-/* Common Styles for Frequently Used Elements End */
-/* Reusable Components for This Site Start */
 .logo {
   display: flex;
   align-items: center;
@@ -134,7 +124,6 @@ p {
   background-color: var(--theme-color);
 }
 
-/* Reusable Components for This Site End */
 .site-wrapper {
   padding: 2rem;
   border: 2px solid var(--theme-primary-border-color);
@@ -364,10 +353,3 @@ footer p {
   color: var(--theme-color);
   font-weight: 400;
 }
-
-/* Page-Specific Styles End */
-/* Keyframes for Animations Start */
-@keyframes animation-name {
-  /* Define your keyframes here */
-}
-/* Keyframes for Animations End */

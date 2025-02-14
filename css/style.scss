@@ -1,14 +1,14 @@
-/* Google Fonts Import */
+// Google Fonts Import
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Syne:wght@400..800&display=swap");
 
-/* CSS Variables Start */
+// CSS Variables Start
 :root {
-  /* Theme Fonts */
+  // Theme Fonts
   --font-family-1: "Roboto Mono", serif;
   --font-family-2: "Syne", serif;
   --font-family-3: "Inter", serif;
 
-  /* Theme Colors */
+  // Theme Colors
   --theme-bg: var(--primary-bg);
   --theme-color: var(--primary-color);
   --theme-primary-border-color: var(--primary-border-color);
@@ -27,9 +27,9 @@
   --primary-color: #fdfbf5;
   --primary-border-color: rgb(172, 172, 172);
 }
-/* CSS Variables End */
+// CSS Variables End
 
-/* Reset Default Styles Start */
+// Reset Default Styles Start
 *,
 *::before,
 *::after {
@@ -39,7 +39,7 @@
 }
 
 html {
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%; // 1rem = 10px
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -49,9 +49,9 @@ body {
   padding: 1rem;
   background-color: var(--theme-bg);
 }
-/* Reset Default Styles End */
+// Reset Default Styles End
 
-/* Common Styles for Frequently Used Elements Start */
+// Common Styles for Frequently Used Elements Start
 a {
   text-decoration: none;
   display: inline-block;
@@ -83,9 +83,9 @@ h6 {
 p {
   font-family: var(--font-family-3);
 }
-/* Common Styles for Frequently Used Elements End */
+// Common Styles for Frequently Used Elements End
 
-/* Reusable Components for This Site Start */
+// Reusable Components for This Site Start
 .logo {
   display: flex;
   align-items: center;
@@ -141,7 +141,7 @@ p {
   height: 1.5px;
   background-color: var(--theme-color);
 }
-/* Reusable Components for This Site End */
+// Reusable Components for This Site End
 
 // Page-Specific Styles Start
 .site-wrapper {
@@ -449,10 +449,4 @@ footer {
 }
 // Footer End
 
-/* Page-Specific Styles End */
-
-/* Keyframes for Animations Start */
-@keyframes animation-name {
-  /* Define your keyframes here */
-}
-/* Keyframes for Animations End */
+// Page-Specific Styles End

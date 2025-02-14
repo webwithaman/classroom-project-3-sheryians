@@ -1,0 +1,326 @@
+/* General Styles for screen size >= 768px */
+@media screen and (min-width: 768px) {
+  .section-primary-heading {
+    font-size: 5.3rem;
+  }
+
+  html {
+    font-size: 11px;
+  }
+
+  body {
+    padding: 1.5rem;
+  }
+
+  .site-wrapper {
+    padding: 3rem;
+  }
+
+  // Navbar Start
+  .navbar {
+    padding-bottom: 3rem;
+
+    .navbar-right {
+      .social-icons {
+        display: flex;
+        gap: 1.5rem;
+
+        a {
+          display: grid;
+          place-items: center;
+          font-size: 1.2rem;
+          width: 3.5rem;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          text-transform: uppercase;
+          color: var(--theme-color);
+          border: 1px solid var(--theme-primary-border-color);
+        }
+      }
+
+      .separator {
+        width: 1px;
+        background-color: var(--theme-color);
+        align-self: stretch;
+      }
+
+      .separator:first-of-type {
+        display: none;
+      }
+    }
+  }
+  // Navbar End
+
+  // Hero Section Start
+  .hero {
+    .hero-text {
+      h1 {
+        &.section-primary-heading {
+          font-size: 6.5rem;
+        }
+      }
+    }
+  }
+  // Hero Section End
+
+  // Our Values Section Start
+  .our-values {
+    .our-values-right {
+      .our-values-right-box {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+
+        h2 {
+          margin-block: 0;
+        }
+      }
+    }
+  }
+  // Our Values Section End
+
+  // Our Team Section Start
+  .our-team {
+    flex-direction: row;
+    gap: 3rem;
+
+    .section-primary-separator {
+      height: auto;
+      width: 2px;
+    }
+  }
+  // Our Team Section End
+
+  // Footer Links Start
+  .footer-links {
+    flex-direction: row;
+
+    .section-primary-separator {
+      height: auto;
+      width: 1px;
+    }
+
+    .footer-links-left {
+      flex: 1;
+    }
+
+    .footer-links-right {
+      flex: 2;
+    }
+  }
+  // Footer Links End
+}
+
+/* General Styles for screen size >= 768px */
+@media screen and (min-width: 1200px) {
+  .primary-btn {
+    padding: 0.4em 0.8em;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+
+      span {
+        transition: all 0.2s linear;
+        padding-block: 3px;
+      }
+
+      &:hover span:first-child {
+        transform: translateY(-100%);
+      }
+
+      span:last-child {
+        position: absolute;
+        top: 100%;
+        display: initial;
+      }
+
+      &:hover span:last-child {
+        top: 0;
+      }
+    }
+  }
+
+  .section-primary-separator {
+    height: auto;
+    width: 2px;
+  }
+
+  .section-primary-heading {
+    font-size: 6.8rem;
+  }
+
+  .site-wrapper {
+    padding: 4.2rem;
+  }
+
+  .site-wrapper > section {
+    padding-block: 5rem;
+  }
+
+  // Navbar Start
+  .navbar {
+    padding-bottom: 4.2rem;
+
+    .navbar-right {
+      .nav-links {
+        display: revert;
+        position: initial;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        border: none;
+        padding: 0;
+
+        li {
+          padding: 0 0 0.3rem 0;
+          border: none;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            background-color: var(--theme-color);
+            width: 0;
+            bottom: 0;
+            transition: all 0.3s linear;
+            left: 0;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 1.5rem;
+
+        a {
+          display: grid;
+          place-items: center;
+          font-size: 1.2rem;
+          width: 3.5rem;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          text-transform: uppercase;
+          color: var(--theme-color);
+          border: 1px solid var(--theme-primary-border-color);
+
+          &:hover {
+            background-color: var(--theme-color);
+            color: var(--theme-bg);
+          }
+        }
+      }
+
+      .separator:first-of-type {
+        display: revert;
+      }
+
+      .separator {
+        width: 1px;
+        background-color: var(--theme-color);
+        align-self: stretch;
+      }
+
+      .theme-mode-toggle-btns {
+        .toggle-bar {
+          display: none;
+        }
+      }
+    }
+  }
+  // Navbar End
+
+  // Hero Section Start
+  .hero {
+    .hero-text {
+      h1 {
+        &.section-primary-heading {
+          font-size: 8rem;
+        }
+
+        br {
+          display: revert;
+        }
+      }
+    }
+  }
+  // Hero Section End
+
+  // Our Values Section Start
+  .our-values {
+    flex-direction: row;
+
+    .our-values-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex: 2;
+    }
+
+    .our-values-right {
+      flex: 1;
+
+      .our-values-right-box {
+        flex-direction: column;
+        gap: 0;
+
+        h2 {
+          margin-block: 0.3em;
+        }
+      }
+    }
+  }
+  // Our Values Section End
+
+  // Our Team Section Start
+  .our-team {
+    .our-team-left {
+      flex: 1;
+    }
+
+    .our-team-right {
+      flex: 2;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .our-team-right-box {
+        width: 47%;
+      }
+    }
+  }
+  // Our Team Section End
+
+  // Footer Links Start
+  .footer-links {
+    .footer-links-right {
+      flex-direction: row;
+
+      .footer-links-right-col {
+        flex: 1;
+      }
+
+      .separator {
+        display: none;
+      }
+    }
+  }
+  // Footer Links End
+
+  // Footer Start
+  footer {
+    padding-top: 5rem;
+  }
+  // Footer End
+}

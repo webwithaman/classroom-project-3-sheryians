@@ -16,6 +16,7 @@
 
     <!-- Custom External Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
   </head>
 
   <body>
@@ -32,20 +33,25 @@
           <input type="checkbox" id="checkbox-for-toggle" />
 
           <ul class="nav-links">
-            <li><a href="">Home</a></li>
-            <li><a href="">services</a></li>
-            <li><a href="">studio</a></li>
-            <li><a href="">blog</a></li>
-            <li><a href="">contact</a></li>
-            <button class="primary-btn" type="button">let's talk</button>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#our-team">studio</a></li>
+            <li><a href="#our-values">blog</a></li>
+            <li><a href="#contact">contact</a></li>
+            <button class="primary-btn" type="button">
+              <div>
+                <span>let's talk</span>
+                <span>let's talk</span>
+              </div>
+            </button>
           </ul>
 
           <span class="separator"></span>
 
           <div class="social-icons">
-            <a href="">in</a>
-            <a href="">in</a>
-            <a href="">in</a>
+            <a href="https://www.instagram.com/webwithaman/">in</a>
+            <a href="https://www.linkedin.com/in/webwithaman/">ln</a>
+            <a href="https://x.com/webwithaman/">x</a>
           </div>
 
           <span class="separator"></span>
@@ -82,7 +88,7 @@
       <!-- Hero Section End -->
 
       <!-- Our Values Section Start -->
-      <section class="our-values">
+      <section class="our-values" id="our-values">
         <div class="our-values-left">
           <div class="our-values-text">
             <h6 class="section-primary-small-text">our values</h6>
@@ -90,7 +96,12 @@
               Our vision is to connect with the world trough innovation.
             </h1>
           </div>
-          <button class="primary-btn" type="button">our services</button>
+          <button class="primary-btn" type="button">
+            <div>
+              <span>our services</span>
+              <span>our services</span>
+            </div>
+          </button>
         </div>
 
         <span class="section-primary-separator"></span>
@@ -113,15 +124,13 @@
           <span class="section-primary-separator"></span>
 
           <div class="our-values-right-box">
-            <i class="fa-brands fa-slack"></i>
+            <i class="fa-brands fa-dropbox"></i>
             <div>
-              <h2>Vision</h2>
+              <h2>innovation</h2>
               <p>
-                Our relentless pursuit of a shared vision fuels our creativity
-                and propels us forward. With clarity and foresight, we craft
-                strategies that align with our clients' goals and aspirations,
-                transforming their dreams into reality and shaping a future
-                worth embracing.
+                Innovation is at the core of everything we do. We embrace
+                curiosity, explore uncharted territories, and challenge the
+                status quo.
               </p>
             </div>
           </div>
@@ -129,15 +138,13 @@
           <span class="separator"></span>
 
           <div class="our-values-right-box">
-            <i class="fa-brands fa-slack"></i>
+            <i class="fa-solid fa-handshake"></i>
             <div>
-              <h2>Vision</h2>
+              <h2>Connection</h2>
               <p>
-                Our relentless pursuit of a shared vision fuels our creativity
-                and propels us forward. With clarity and foresight, we craft
-                strategies that align with our clients' goals and aspirations,
-                transforming their dreams into reality and shaping a future
-                worth embracing.
+                We believe in the power of connection. We strive to build
+                bridges between brands and their audiences, fostering genuine
+                and lasting relationships.
               </p>
             </div>
           </div>
@@ -146,7 +153,7 @@
       <!-- Our Values Section End -->
 
       <!-- Our Team Section Start -->
-      <section class="our-team">
+      <section class="our-team" id="our-team">
         <div class="our-team-left">
           <div class="our-team-text">
             <h1 class="section-primary-heading">our team</h1>
@@ -166,35 +173,40 @@
             <div class="our-team-video">
               <video autoplay muted src="assets/videos/video-2.mp4"></video>
             </div>
-            <h4>Jacob Jones</h4>
-            <h6>CEO</h6>
+            <h4>Kristin Watson</h4>
+            <h6>Creative director</h6>
           </div>
           <div class="our-team-right-box">
             <div class="our-team-video">
               <video autoplay muted src="assets/videos/video-3.mp4"></video>
             </div>
-            <h4>Jacob Jones</h4>
-            <h6>CEO</h6>
+            <h4>Cameron William</h4>
+            <h6>visual designer</h6>
           </div>
           <div class="our-team-right-box">
             <div class="our-team-video">
               <video autoplay muted src="assets/videos/video-4.mp4"></video>
             </div>
-            <h4>Jacob Jones</h4>
-            <h6>CEO</h6>
+            <h4>Guy Hawkins</h4>
+            <h6>cto</h6>
           </div>
         </div>
       </section>
       <!-- Our Team Section End -->
 
       <!-- Contact Section Start -->
-      <section>
+      <section id="contact">
         <h6 class="section-primary-small-text">Contact</h6>
         <h1 class="section-primary-heading">
           Let’s bring your <br />
           brand to the next level
         </h1>
-        <button class="primary-btn" type="button">get in touch</button>
+        <button class="primary-btn" type="button">
+          <div>
+            <span>get in touch</span>
+            <span>get in touch</span>
+          </div>
+        </button>
       </section>
       <!-- Contact Section End -->
 
@@ -218,37 +230,41 @@
             <h5>Pages</h5>
             <ul>
               <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <button class="primary-btn" type="button">more templates</button>
+              <li>Services</li>
+              <li>Pages</li>
+              <li>Testimonials</li>
+              <li>Contact</li>
+              <button class="primary-btn" type="button">
+                <div>
+                  <span>more templates</span>
+                  <span>more templates</span>
+                </div>
+              </button>
             </ul>
           </div>
 
           <span class="separator"></span>
 
           <div class="footer-links-right-col">
-            <h5>Pages</h5>
+            <h5>cms</h5>
             <ul>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <li>Blog</li>
+              <li>work single</li>
+              <li>react</li>
+              <li>request us</li>
             </ul>
           </div>
 
           <span class="separator"></span>
 
           <div class="footer-links-right-col">
-            <h5>Pages</h5>
+            <h5>uitlity pages</h5>
             <ul>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <li>page error</li>
+              <li>styleguide</li>
+              <li>licensing</li>
+              <li>version</li>
+              <li>release</li>
             </ul>
           </div>
         </div>
@@ -265,18 +281,22 @@
 
     <!-- Javascript -->
     <script>
-      let themeToggleBtn = (document.querySelector(".theme-toggle").onclick =
-        function () {
-          if (!document.documentElement.classList.contains("dark-mode")) {
-            document.documentElement.classList.add("dark-mode");
-            document.documentElement.classList.remove("light-mode");
-            this.style.justifyContent = "flex-end";
-          } else {
-            document.documentElement.classList.add("light-mode");
-            document.documentElement.classList.remove("dark-mode");
-            this.style.justifyContent = "flex-start";
-          }
-        });
+      // Get Theme Toggle Button for Changing Theme Mode (Light or Dark)
+      document.querySelector(".theme-toggle").onclick = function () {
+        let rootElement = document.documentElement;
+
+        if (!rootElement.classList.contains("dark-mode")) {
+          rootElement.classList.add("dark-mode");
+          rootElement.classList.remove("light-mode");
+          this.style.justifyContent = "flex-end";
+          this.firstElementChild.classList.add("fa-moon");
+        } else {
+          rootElement.classList.add("light-mode");
+          rootElement.classList.remove("dark-mode");
+          this.style.justifyContent = "flex-start";
+          this.firstElementChild.classList.remove("fa-moon");
+        }
+      };
     </script>
   </body>
 </html>

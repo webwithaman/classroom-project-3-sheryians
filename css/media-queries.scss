@@ -1,3 +1,28 @@
+/* General Styles for screen size <= 300px */
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 48%;
+  }
+}
+
+/* General Styles for screen size <= 230px */
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 38%;
+  }
+}
+
+/* General Styles for screen size <= 180px */
+@media screen and (max-width: 300px) {
+  * {
+    word-wrap: break-word;
+  }
+
+  html {
+    font-size: 25%;
+  }
+}
+
 /* General Styles for screen size >= 768px */
 @media screen and (min-width: 768px) {
   .section-primary-heading {
@@ -323,4 +348,18 @@
     padding-top: 5rem;
   }
   // Footer End
+}
+
+/* General Styles for screen size >= 1800px */
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 68%;
+  }
+}
+
+/* General Styles for screen size >= 2200px */
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 78%;
+  }
 }

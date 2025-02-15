@@ -5,13 +5,13 @@
   }
 }
 /* General Styles for screen size <= 230px */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 230px) {
   html {
     font-size: 38%;
   }
 }
 /* General Styles for screen size <= 180px */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 180px) {
   * {
     word-wrap: break-word;
   }
